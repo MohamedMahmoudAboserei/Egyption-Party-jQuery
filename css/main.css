@@ -1,0 +1,233 @@
+/* ================== Fonts ================== */
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/* ================== Theme Customize ================== */
+[data-theme="dark"] {
+    --main-color: #1c1c1c;
+    --second-color: rgb(58, 73, 123);
+    --third-color: #eee;
+    --fourth-color: #0d6efd;
+    --p-color: #e1e1e1;
+}
+
+[data-theme="light"] {
+    --main-color: #eeeeee;
+    --seconde-color: #909396;
+    --third-color: #1c1c1c;
+    --fourth-color: #414550;
+    --p-color: #272b30;
+}
+/* ================== Global Rules ==================*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Nerko One", cursive;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+body {
+    font-family: "Roboto Condensed", sans-serif;
+}
+.bg-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(214, 46, 51, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+/* ================== Navbar ==================*/
+header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #1c1c1c;
+    height: 100%;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+header nav span.openNav {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 20px;
+}
+header nav .navbar {
+    width: 0;
+}
+header nav .navbar .linkStyle {
+    padding: 75px;
+}
+header nav .navbar .linkStyle li {
+    padding: 40px 0;
+}
+header nav .navbar .linkStyle li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.3s;
+}
+header nav .navbar .linkStyle li a.closeBtn {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* ================== Header ==================*/
+header {
+    background-image: url(../img/events-heavenly-header.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    color: white;
+}
+header .header-title {
+    z-index: 11;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+}
+/* ================== Content ==================*/
+.contact {
+    text-align: center;
+    margin: 120px auto;
+    width: 50%;
+}
+.contact h3 {
+    padding: 10px;
+    margin: 0;
+    background-color: rgba(214, 46, 51, 0.6);
+    cursor: pointer;
+    color: white;
+}
+.contact p {
+    padding: 10px;
+    background-color: #ccc;
+    display: none;
+    margin: 0;
+}
+.contact p.show {
+    display: block;
+}
+/* ================== Count ==================*/
+.count {
+    background-image: url(../img/invitation-2508607__340.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    position: relative;
+    height: 330px;
+    text-align: center;
+}
+.count .time-text {
+    position: relative;
+    top: 33%;
+}
+.count .time-text .time {
+    padding: 50px;
+    border: 2px solid #FFF;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 30px;
+    color: #fff;
+}
+/* ================== Contact Us ==================*/
+.contactUs {
+    margin: 100px 0;
+    text-align: center;
+}
+.contactUs .head-title h2 {
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.contactUs .head-title p {
+    color: #777;
+    font-weight: 300;
+    font-size: 16px;
+}
+.contactUs .contact-info h3 {
+    color: #444;
+    font-size: 18px;
+    font-weight: bold;
+}
+.contactUs .contact-info p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #777;
+}
+.contactUs .icons {
+    margin-top: 50px;
+}
+.contactUs .icons p {
+    margin-bottom: 35px;
+}
+.contactUs i {
+    margin-right: 20px;
+    color: #777;
+}
+.contactUs .red {
+    color: #D62E33 !important;
+}
+.contactUs .contact-info .social-list {
+    margin-top: 60px;
+    color: #777;
+}
+.contactUs .contact-info .social-list i {
+    margin-right: 10px;
+    border: 1px solid #999;
+    width: 40px;
+    height: 40px;
+    line-height: 42px;
+    cursor: pointer;
+    text-align: center;
+}
+.contactUs .contact-info .social-list i:hover {
+    color: #fff;
+    background-color: #D62E33;
+    border: 1px solid #D62E33;
+}
+.contactUs form input,
+.contactUs form textarea {
+    margin-bottom: 20px;
+    border-radius: 0;
+}
+.contactUs form textarea {
+    height: 200px;
+    resize: vertical;
+}
+.contactUs form button {
+    background-color: #D62E33;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 0;
+    display: block;
+    margin-top: 20px;
+    text-transform: uppercase
+}
+.contactUs form #chars {
+    font-size: 20px;
+    color: #D62E33;
+}
