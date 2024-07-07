@@ -40,10 +40,10 @@ function countDownToTime(countTo) {
 }
 
 // Contact Us
-var maxLength = 100;
+let maxLength = 100;
 $('textarea').on('keyup', function() {
-    var length = $(this).val().length;
-    var AmountLeft = maxLength - length;
+    let length = $(this).val().length;
+    let AmountLeft = maxLength - length;
     if (AmountLeft <= 0) {
         $("#chars").text("your available character finished");
     }
@@ -51,3 +51,20 @@ $('textarea').on('keyup', function() {
         $("#chars").text(AmountLeft);
     }
 })
+
+// Dark & Light
+const mode = document.getElementById("mode");
+mode.addEventListener("click", function (e) {
+    theme(e.target)
+})
+function theme(el) {
+    if (mode.classList.contains("fa-sun")) {
+        document.querySelector("html").setAttribute("data-theme", "light");
+        mode.classList.replace("fa-sun", "fa-moon"); // change icon -->moon
+        localStorage.setItem("theme", "light");
+    } else {
+        mode.classList.replace("fa-moon", "fa-sun"); //change icon -->sun
+        document.querySelector("html").setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+    }
+}

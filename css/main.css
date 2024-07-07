@@ -75,12 +75,16 @@ header nav .navbar .linkStyle {
 }
 header nav .navbar .linkStyle li {
     padding: 40px 0;
+    
 }
 header nav .navbar .linkStyle li a {
     color: white;
     text-decoration: none;
     font-size: 25px;
-    transition: 0.3s;
+    transition: all 0.5s;
+}
+header nav .navbar .linkStyle li a:hover {
+    color: rgba(214, 46, 51, 0.4);
 }
 header nav .navbar .linkStyle li a.closeBtn {
     position: absolute;
